@@ -59,3 +59,7 @@ loadEmployeeData() {
       this.loading = false;  //at last seting boolean flag to indicate loading is completed
    });
 }
+
+<button [disabled]="IsEmpty">Print</button>
+is better than
+<button [disabled]="!IsExportEnabled">Print</button>
