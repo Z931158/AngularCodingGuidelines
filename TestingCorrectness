@@ -1,0 +1,26 @@
+https://www.typescriptlang.org/play?#code/GYVwdgxgLglg9mABDAzgYRAJ0wUzFAeUwAVcA3eEFAWQSgAsAKGMABxCgBEBDKHALkQ8+ASkSCARnDgAbHNyQBvALAAoRBsRyoiCFlz5hORAF5EYHAHchvHIwDkABgCMAemePXAJkdfn9kQBuNU0tHB0WdihafHpTZDYOIwA6AHNwmIZGMQBqRGdg9U1tXX08aLo4sz1scpT0itjsxDyCkOLw0tr8AE15THiagy5bNPCAMRAZGT7uTGyAGkQUHDloHAATWYGzSKTRhsnp7ezC0JhgREYh8u3TEzMVtb4t-rEVItDcKCwkPcaGPcusNMnEAD5ghJRUFA65lfAwgC0+SC7Q0AF80YhVitEB9Qhpvr8rjcEZUgc5EAAyKlXJ44davOZA0lQO7I5xiGlQjgwh75Lyoz6ITFFUVqCAIFCyHDJGRwVLMdDwwgkciUGiVRgWaxGBwedwAFm8vkcAREInakrA0rkcoVSow3VVpBwFDgVFB2qsNj4+rczmNPh85stRWtttl8sVqCdwyIrvdnq1Ot9dnszi8RpNIYtYY0EZl9pjyudCfVHs1TVTeqcAaDvn8eatUqL0cdKvLbo1XprtgcvmzwabFpbNrbDtjnbV3crvZ9tccAGYh43Q2PI8WO2WZ0mq1k+36nMbAzmR-ndK27e2pzvEz2Uwv+04AKyrvzr8NXqOT0vx3cPtWT5Ho4ABs77nkAA
+
+```
+function isCurrentOrPreviousMonth(inputDate: Date) : boolean {
+    let currentDate = new Date('01/10/2021');
+    let inputMonth = inputDate.getMonth() + 1;
+    let currentMonth = currentDate.getMonth() + 1;
+    let currentYear = currentDate.getFullYear(), selectedYear = inputDate.getFullYear();
+    if (currentYear === selectedYear) {
+      return inputMonth == currentMonth || inputMonth == (currentMonth - 1);
+    }
+    else {
+      return (currentMonth == 1 && (selectedYear == currentYear - 1) && inputMonth == 12);
+    }
+  }
+
+  console.log(isCurrentOrPreviousMonth(new Date('10/14/2020')))
+  console.log(isCurrentOrPreviousMonth(new Date('11/14/2020')))
+  console.log(isCurrentOrPreviousMonth(new Date('12/14/2020')))
+  console.log(isCurrentOrPreviousMonth(new Date('01/14/2021')))
+  console.log(isCurrentOrPreviousMonth(new Date('02/14/2021')))
+  console.log(isCurrentOrPreviousMonth(new Date('03/14/2021')))
+  console.log(isCurrentOrPreviousMonth(new Date('04/14/2021')))
+  console.log(isCurrentOrPreviousMonth(new Date('05/14/2021')))
+  console.log(isCurrentOrPreviousMonth(new Date('06/14/2021')))
+  ```
